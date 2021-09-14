@@ -8,12 +8,13 @@ public class TestMultiIdioma {
 
 	@Test
 	public void test_es() {
-		Preguntas preguntas = new PreguntasEs();
+		//implementar Abstract factory
+		Preguntas preguntas = null;
 		
 		assertEquals("¿qué hora es?", preguntas.preguntaHora() );
 		assertEquals("¿qué tiempo hace?", preguntas.preguntaTiempo() );
-		
-		Saludos saludos = new SaludosEs();
+		//implementar Abstract factor
+		Saludos saludos = null;
 		
 		assertEquals("buenos días", saludos.buenosDias());
 		assertEquals("buenas tardes", saludos.buenasTardes());
@@ -21,12 +22,14 @@ public class TestMultiIdioma {
 	
 	@Test
 	public void test_en() {
-		Preguntas preguntas = new PreguntasEn();
+		//implementar Abstract factor
+		Preguntas preguntas = null;
 		
 		assertEquals("what time is it?", preguntas.preguntaHora() );
 		assertEquals("how is the weather?", preguntas.preguntaTiempo() );
 		
-		Saludos saludos = new SaludosEn();
+		//implementar Abstract factor
+		Saludos saludos = null;
 		
 		assertEquals("good morning", saludos.buenosDias());
 		assertEquals("good afternoon", saludos.buenasTardes());
