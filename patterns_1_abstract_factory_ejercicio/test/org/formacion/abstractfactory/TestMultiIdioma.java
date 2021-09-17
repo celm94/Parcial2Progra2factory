@@ -10,32 +10,22 @@ public class TestMultiIdioma {
 	@Test
 	public void test_es() {
 		//implementar Abstract factory
-		Preguntas preguntas = new PreguntasEs();
-		
-		assertEquals("¿qué hora es?", preguntas.preguntaHora() );
-		assertEquals("¿qué tiempo hace?", preguntas.preguntaTiempo() );
-		//implementar Abstract factor
-		Saludos saludos = new SaludosEs();
-		
-		assertEquals("buenos días", saludos.buenosDias());
-		assertEquals("buenas tardes", saludos.buenasTardes());
+		AbstractFactory es = new EsFactory();
+		Preguntas preguntas = es.GetPreguntas();
+		Saludos saludos = es.GetSaludos();
+
 	}
 	
 	@Test
 	public void test_en() {
 		//implementar Abstract factor
-
-		Preguntas preguntas = new PreguntasEn();
-		
-		assertEquals("what time is it?", preguntas.preguntaHora() );
-		assertEquals("how is the weather?", preguntas.preguntaTiempo() );
-		
+		AbstractFactory en = new EnFactory();
+		Preguntas preguntas = en.GetPreguntas();
 		//implementar Abstract factor
-
-		Saludos saludos = new SaludosEn();
+		Saludos saludos = en.GetSaludos();
 		
-		assertEquals("good morning", saludos.buenosDias());
-		assertEquals("good afternoon", saludos.buenasTardes());
+
+
 	}
 
 }
